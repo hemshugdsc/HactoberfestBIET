@@ -1,6 +1,6 @@
 // This arrow function takes two parameters, adds them together, and returns the result.
 const add = (a, b) => a + b;
 
-// Example usage:
+// Example:
 const sum = add(5, 3); // Calling the 'add' function to add 5 and 3
 console.log(sum);     // Output: 8
