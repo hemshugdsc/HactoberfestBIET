@@ -1,0 +1,26 @@
+function asyncFunction(delay, message) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log(message);
+      resolve();
+    }, delay);
+  });
+}
+
+async function main() {
+  try {
+    await asyncFunction(1000, 'Async Function 1');
+    console.log('Callback 1 executed');
+    await asyncFunction(1000, 'Async Function 2');
+    console.log('Callback 2 executed');
+    await asyncFunction(1000, 'Async Function 3');
+    console.log('Callback 3 executed');
+    // More code can follow without deep nesting
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+main();
+
+console.log('End of the script');
