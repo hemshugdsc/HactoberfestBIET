@@ -1,0 +1,25 @@
+// Define a function that takes two numbers and a callback function as arguments
+function performOperation(x, y, callback) {
+  // Perform some operation with the given numbers
+  const result = x + y;
+
+  // Check if the callback is a function
+  if (typeof callback === 'function') {
+    // Invoke the callback function and pass the result to it
+    callback(result);
+  } else {
+    // If the callback is not a function, log an error message
+    console.error('Callback is not a function');
+  }
+}
+
+// Define a callback function that simply logs the result
+function logResult(result) {
+  console.log(`The result is: ${result}`);
+}
+
+// Call the performOperation function and pass it the numbers and the callback
+performOperation(5, 3, logResult);
+
+// Output:
+// The result is: 8
