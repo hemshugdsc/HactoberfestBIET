@@ -1,0 +1,22 @@
+// This is a JavaScript function called "calculateArea" that calculates the area of a rectangle.
+// It takes two parameters: "length" (length of the rectangle) and "width" (width of the rectangle).
+function calculateArea(length, width) {
+  // Check if either "length" or "width" is less than or equal to zero.
+  if (length <= 0 || width <= 0) {
+    // If either dimension is invalid, return an error message.
+    return "Invalid dimensions. Length and width must be greater than zero.";
+  } else {
+    // If both dimensions are valid, calculate the area by multiplying length and width.
+    const area = length * width;
+    // Return the calculated area.
+    return area;
+  }
+}
+
+// Example usage of the function:
+const length = 5;
+const width = 3;
+const area = calculateArea(length, width);
+
+// Output the result to the console.
+console.log(`The area of a rectangle with length ${length} and width ${width} is ${area}.`);
