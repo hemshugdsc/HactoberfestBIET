@@ -1,0 +1,30 @@
+// Simulate asynchronous functions with setTimeout
+function asyncFunction1(callback) {
+  setTimeout(function () {
+    console.log("Async Function 1");
+    callback();
+  }, 1000);
+}
+
+function asyncFunction2(callback) {
+  setTimeout(function () {
+    console.log("Async Function 2");
+    callback();
+  }, 1000);
+}
+
+function asyncFunction3(callback) {
+  setTimeout(function () {
+    console.log("Async Function 3");
+    callback();
+  }, 1000);
+}
+
+// Nested callbacks
+asyncFunction1(function () {
+  asyncFunction2(function () {
+    asyncFunction3(function () {
+      console.log("All async functions completed.");
+    });
+  });
+});
