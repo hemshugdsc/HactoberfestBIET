@@ -1,0 +1,23 @@
+// This is an asynchronous function that simulates fetching data from a remote server.
+async function fetchData() {
+  try {
+    // Simulate an asynchronous API call using a setTimeout with a 2-second delay.
+    const response = await new Promise((resolve) => {
+      setTimeout(() => {
+        resolve("Data fetched successfully!");
+      }, 2000);
+    });
+
+    // The code will pause here until the Promise resolves.
+    console.log(response); // Output: Data fetched successfully!
+  } catch (error) {
+    // Handle any errors that may occur during the asynchronous operation.
+    console.error("Error fetching data:", error);
+  }
+}
+
+// Call the async function.
+console.log("Fetching data...");
+fetchData(); // This will trigger the fetchData function.
+
+console.log("Execution continues while waiting for data...");
