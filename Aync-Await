@@ -16,7 +16,7 @@ async function fetchData() {
   }
 }
 
-// Call the async function.
+// Calling the async function.
 console.log("Fetching data...");
 fetchData(); // This will trigger the fetchData function.
 
